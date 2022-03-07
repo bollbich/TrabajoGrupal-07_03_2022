@@ -44,7 +44,7 @@ public class Venta implements Serializable{
 		
 	}
 
-	public Venta( int cantidad, double subtotal, int iva, double total,Cliente id_cliente,Producto id_producto) {
+	public Venta(long id, int cantidad, double subtotal, int iva, double total,Cliente id_cliente,Producto id_producto) {
 		
 		
 		this.cantidad = cantidad;
