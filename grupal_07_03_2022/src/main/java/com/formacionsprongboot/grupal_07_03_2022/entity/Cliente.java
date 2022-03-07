@@ -33,7 +33,6 @@ public class Cliente implements Serializable {
 	private String apellidos;
 	private String sexo;
 	private int telefono;
-	private Venta ventas;
 	
 //Getters and Setters
 
@@ -77,13 +76,6 @@ public class Cliente implements Serializable {
 		this.telefono = telefono;
 	}
 
-	public Venta getVentas() {
-		return ventas;
-	}
-
-	public void setVentas(Venta ventas) {
-		this.ventas = ventas;
-	}
 	
 	
 	

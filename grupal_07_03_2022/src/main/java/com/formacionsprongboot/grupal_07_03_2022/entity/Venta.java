@@ -6,9 +6,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "ventas")
@@ -21,9 +24,13 @@ public class Venta implements Serializable{
 	private Long folio;
 	
 	@OneToOne
+	@JoinColumn(name="id_cliente")
+	@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 	private Cliente numeroCliente;
 	
 	@OneToOne
+	@JoinColumn(name="id_producto")
+	@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 	private Producto claveProducto;
 	
 	private int cantidad;

@@ -10,16 +10,15 @@
 <body>
 
 <nav class="nav">
-  <a class="nav-link" aria-current="page" th:href="@{/Clientes}">Clientes</a>
-  <a class="nav-link" th:href="@{/Cliente/Nuevo}">Nuevo cliente</a>
+  <a class="nav-link" aria-current="page" th:href="@{/clientes}">Clientes</a>
+  <a class="nav-link" th:href="@{/clientes/nuevo}">Nuevo cliente</a>
 </nav>
 <nav class="nav">
   <a class="nav-link" aria-current="page" th:href="@{/productos}">Productos</a>
-  <a class="nav-link" th:href="@{/Proyecto/Nuevo}">Nuevo Producto</a>
+  <a class="nav-link" th:href="@{/productos/nuevo}">Nuevo Producto</a>
 </nav>
 <nav class="nav">
   <a class="nav-link" aria-current="page" th:href="@{/ventas}">Ventas</a>
-  <a class="nav-link" th:href="@{/Venta/Nuevo}">Nueva Venta</a>
 </nav>
 
 
@@ -43,8 +42,8 @@
 			</tr>			
 			<tr th:each="venta: ${Ventas}">			
 			  <td th:text="${venta.folio}" />
-			  <td th:text="${venta.n_cliente}" />
-			  <td th:text="${venta.clave}" />
+			  <td th:text="${venta.numeroCliente.id_cliente}" />
+			  <td th:text="${venta.claveProducto.id_producto}" />
 			  <td th:text="${venta.cantidad}" />
 			  <td th:text="${venta.subtotal}" />
 			  <td th:text="${venta.iva}" />

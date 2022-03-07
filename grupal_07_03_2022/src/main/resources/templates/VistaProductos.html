@@ -10,16 +10,15 @@
 <body>
 
 <nav class="nav">
-  <a class="nav-link" aria-current="page" th:href="@{/Clientes}">Clientes</a>
-  <a class="nav-link" th:href="@{/Cliente/Nuevo}">Nuevo cliente</a>
+  <a class="nav-link" aria-current="page" th:href="@{/clientes}">Clientes</a>
+  <a class="nav-link" th:href="@{/clientes/nuevo}">Nuevo cliente</a>
 </nav>
 <nav class="nav">
   <a class="nav-link" aria-current="page" th:href="@{/productos}">Productos</a>
-  <a class="nav-link" th:href="@{/Proyecto/Nuevo}">Nuevo Producto</a>
+  <a class="nav-link" th:href="@{/productos/nuevo}">Nuevo Producto</a>
 </nav>
 <nav class="nav">
   <a class="nav-link" aria-current="page" th:href="@{/ventas}">Ventas</a>
-  <a class="nav-link" th:href="@{/Venta/Nuevo}">Nueva Venta</a>
 </nav>
 
 
@@ -41,16 +40,16 @@
 			    <th>Acciones</th>
 			</tr>			
 			<tr th:each="producto: ${Productos}">			
-			  <td th:text="${cliente.id}" />
-			  <td th:text="${cliente.nombre}" />
-			  <td th:text="${cliente.descripcion}" />
-			  <td th:text="${cliente.p_unitario}" />
-			  <td th:text="${cliente.existencia}" />
+			  <td th:text="${producto.id_producto}" />
+			  <td th:text="${producto.nombre}" />
+			  <td th:text="${producto.descripcion}" />
+			  <td th:text="${producto.precio_unitario}" />
+			  <td th:text="${producto.existencias}" />
 			  
 			  <td>			
-				  <a type="submit" th:href="@{/productos/editar/{id}(id=${productos.id})}" class="btn btn-primary">Editar</a>
+				  <a type="submit" th:href="@{/productos/editar/{id}(id=${producto.id_producto})}" class="btn btn-primary">Editar</a>
 				  
-				  <a type="submit" th:href="@{/productos/eliminar/{id}(id=${productos.id})}" class="btn btn-danger">Eliminar</a>
+				  <a type="submit" th:href="@{/productos/eliminar/{id}(id=${producto.id_producto})}" class="btn btn-danger">Eliminar</a>
 			  </td>
 			  
 			</tr>		

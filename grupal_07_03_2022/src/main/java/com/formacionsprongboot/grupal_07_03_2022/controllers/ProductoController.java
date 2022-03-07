@@ -27,12 +27,13 @@ public class ProductoController {
 @GetMapping("/productos")
 public String productos(Model modelo) {
 	
-	modelo.addAttribute("dato",servicio.findAll());
+	modelo.addAttribute("Productos",servicio.findAll());
 	return "VistaProductos";
 }
 
-@GetMapping("productos/nuevo")
+@GetMapping("/productos/nuevo")
 public String crearProductos(Model modelo) {
+	
 	Producto p=new Producto();
 	
 	modelo.addAttribute("keyProducto",p);
@@ -53,16 +54,15 @@ public String editarProducto(@PathVariable Long id, Model modelo) {
 	return "EditarProductoView";
 }
 
-@PostMapping("/productos/{id}")
-public String actualizarProducto(@PathVariable Long id,@ModelAttribute("keyProducto") Producto p) {
+@PostMapping("/productos/SAVE/{id}")
+public String actualizarProducto(@PathVariable Long id,@ModelAttribute("KeyProducto") Producto p) {
+	
 	Producto productoExistente=servicio.findById(id);
 	
-	productoExistente.setId_producto(id);
 	productoExistente.setNombre(p.getNombre());
 	productoExistente.setDescripcion(p.getDescripcion());
 	productoExistente.setPrecio_unitario(p.getPrecio_unitario());
 	productoExistente.setExistencias(p.getExistencias());
-	
 	
 	
 	servicio.save(productoExistente);

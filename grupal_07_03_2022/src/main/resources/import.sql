@@ -1,8 +1,7 @@
-INSERT INTO `ventas` (`cantidad`, `clave_producto`, `iva`, `numero_cliente`, `subtotal`, `total`) VALUES (12, '234', 12, '1', 123, 1231);
+INSERT INTO `clientes` (`apellidos`, `nombre`, `sexo`, `telefono`) VALUES ('fer', 'ferrr', 'm', 34534535);
 
 
-INSERT INTO `productos` ( `descripcion`, `existencias`, `nombre`, `precio_unitario`, `id_folio`) VALUES ('efwefwr', 12, 'efwrgw', 12.5, 1);
+INSERT INTO `productos` (`descripcion`, `existencias`, `nombre`, `precio_unitario`) VALUES ('efe4retrg', 345, 'reff', 23434);
 
 
-INSERT INTO `clientes` ( `apellidos`, `nombre`, `sexo`, `telefono`, `id_folio`) VALUES ('fewerfwe', 'wefwfe', 'm', 34546, 1);
-
+INSERT INTO `ventas` (`cantidad`, `iva`, `subtotal`, `total`, `id_producto`, `id_cliente`) VALUES (23, 21, 123, 1233, 1, 1);

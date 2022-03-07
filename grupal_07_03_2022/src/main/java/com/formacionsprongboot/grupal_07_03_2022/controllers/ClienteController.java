@@ -29,12 +29,12 @@ public class ClienteController {
 	public String crearClientes(Model modelo) {
 		Cliente cliente = new Cliente();
 		
-		modelo.addAttribute("id_cliente",cliente);
+		modelo.addAttribute("KeyCliente",cliente);
 		return "NuevoClienteView";
 	}
 
 	@PostMapping("/cliente")
-	public String guardarCliente(@ModelAttribute("id_cliente") Cliente cliente) {
+	public String guardarCliente(@ModelAttribute("KeyCliente") Cliente cliente) {
 		
 		servicio.save(cliente);
 		return "redirect:/clientes";
@@ -42,7 +42,8 @@ public class ClienteController {
 
 	@GetMapping("/clientes/editar/{id}")
 	public String editarCliente(@PathVariable Long id, Model modelo) {
-		modelo.addAttribute("id_cliente", servicio.findById(id));
+		
+		modelo.addAttribute("KeyCliente", servicio.findById(id));
 		
 		return "EditarClientesView";
 	}
@@ -51,11 +52,10 @@ public class ClienteController {
 	public String actualizarCliente(@PathVariable Long id,@ModelAttribute("id_cliente") Cliente cliente) {
 		Cliente clienteExistente=servicio.findById(id);
 		
-		clienteExistente.setId_cliente(clienteExistente.getId_cliente());
-		clienteExistente.setNombre(clienteExistente.getNombre());
-		clienteExistente.setApellidos(clienteExistente.getApellidos());
-		clienteExistente.setSexo(clienteExistente.getSexo());
-		clienteExistente.setTelefono(clienteExistente.getTelefono());
+		clienteExistente.setNombre(cliente.getNombre());
+		clienteExistente.setApellidos(cliente.getApellidos());
+		clienteExistente.setSexo(cliente.getSexo());
+		clienteExistente.setTelefono(cliente.getTelefono());
 		
 		servicio.save(clienteExistente);
 		
