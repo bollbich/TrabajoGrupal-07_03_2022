@@ -7,29 +7,23 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "ventas")
 public class Venta implements Serializable{
 
-<<<<<<< HEAD
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-=======
 	private static final long serialVersionUID = 1L;
 	
->>>>>>> PasoIntermedioEntidades
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long folio;
 	
-	@OneToMany
+	@OneToOne
 	private Cliente numeroCliente;
 	
-	@OneToMany
+	@OneToOne
 	private Producto claveProducto;
 	
 	private int cantidad;
