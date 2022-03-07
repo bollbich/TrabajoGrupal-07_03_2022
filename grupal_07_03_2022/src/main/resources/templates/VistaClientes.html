@@ -14,11 +14,11 @@
   <a class="nav-link" th:href="@{/Cliente/Nuevo}">Nuevo cliente</a>
 </nav>
 <nav class="nav">
-  <a class="nav-link" aria-current="page" th:href="@{/Productos}">Productos</a>
+  <a class="nav-link" aria-current="page" th:href="@{/productos}">Productos</a>
   <a class="nav-link" th:href="@{/Proyecto/Nuevo}">Nuevo Producto</a>
 </nav>
 <nav class="nav">
-  <a class="nav-link" aria-current="page" th:href="@{/Ventas}">Ventas</a>
+  <a class="nav-link" aria-current="page" th:href="@{/ventas}">Ventas</a>
   <a class="nav-link" th:href="@{/Venta/Nuevo}">Nueva Venta</a>
 </nav>
 
@@ -48,9 +48,9 @@
 			  <td th:text="${cliente.sexo}" />
 			  
 			  <td>					  
-				  <a type="submit" th:href="@{/Clientes/editarCliente/{id}(id=${cliente.id})}" class="btn btn-primary">Editar</a>
+				  <a type="submit" th:href="@{/clientes/editar/{id}(id=${cliente.id})}" class="btn btn-primary">Editar</a>
 				  
-				  <a type="submit" th:href="@{/Clientes/BorrarCliente/{id}(id=${cliente.id})}" class="btn btn-danger">Eliminar</a>
+				  <a type="submit" th:href="@{/clientes/eliminar/{id}(id=${cliente.id})}" class="btn btn-danger">Eliminar</a>
 			  </td>
 			  
 			</tr>		
