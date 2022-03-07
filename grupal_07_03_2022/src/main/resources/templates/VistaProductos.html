@@ -28,29 +28,29 @@
 <div class="container">
 
 	<div class="row">
-	<h1 align="center">Listado de clientes</h1>
+	<h1 align="center">Listado de productos</h1>
 	</div>
 	
 		<table class="table table-success table-striped">		
 			<tr>
-			    <th>Nº cliente</th>
+			    <th>Nº producto</th>
 			    <th>Nombre</th>
-			    <th>Apellidos</th>
-			    <th>Sexo</th>
-			    <th>Telefono</th>
+			    <th>Descripción</th>
+			    <th>P. Unitario</th>
+			    <th>Existencias</th>
 			    <th>Acciones</th>
 			</tr>			
-			<tr th:each="cliente: ${Clientes}">			
+			<tr th:each="producto: ${Productos}">			
 			  <td th:text="${cliente.id}" />
 			  <td th:text="${cliente.nombre}" />
-			  <td th:text="${cliente.apellidos}" />
-			  <td th:text="${cliente.telefono}" />
-			  <td th:text="${cliente.sexo}" />
+			  <td th:text="${cliente.descripcion}" />
+			  <td th:text="${cliente.p_unitario}" />
+			  <td th:text="${cliente.existencia}" />
 			  
-			  <td>					  
-				  <a type="submit" th:href="@{/Clientes/editarCliente/{id}(id=${cliente.id})}" class="btn btn-primary">Editar</a>
+			  <td>			
+				  <a type="submit" th:href="@{/Productos/editarProducto/{id}(id=${productos.id})}" class="btn btn-primary">Editar</a>
 				  
-				  <a type="submit" th:href="@{/Clientes/BorrarCliente/{id}(id=${cliente.id})}" class="btn btn-danger">Eliminar</a>
+				  <a type="submit" th:href="@{/Productos/BorrarProducto/{id}(id=${productos.id})}" class="btn btn-danger">Eliminar</a>
 			  </td>
 			  
 			</tr>		

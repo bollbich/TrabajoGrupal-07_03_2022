@@ -28,29 +28,32 @@
 <div class="container">
 
 	<div class="row">
-	<h1 align="center">Listado de clientes</h1>
+	<h1 align="center">Listado de ventas</h1>
 	</div>
 	
 		<table class="table table-success table-striped">		
 			<tr>
-			    <th>Nº cliente</th>
-			    <th>Nombre</th>
-			    <th>Apellidos</th>
-			    <th>Sexo</th>
-			    <th>Telefono</th>
-			    <th>Acciones</th>
+			    <th>Folio</th>
+			    <th>Nº Cliente</th>
+			    <th>Clave</th>
+			    <th>Cantidad</th>
+			    <th>Subtotal</th>
+			    <th>IVA</th>
+			    <th>Total</th>
 			</tr>			
-			<tr th:each="cliente: ${Clientes}">			
-			  <td th:text="${cliente.id}" />
-			  <td th:text="${cliente.nombre}" />
-			  <td th:text="${cliente.apellidos}" />
-			  <td th:text="${cliente.telefono}" />
-			  <td th:text="${cliente.sexo}" />
+			<tr th:each="venta: ${Ventas}">			
+			  <td th:text="${venta.folio}" />
+			  <td th:text="${venta.n_cliente}" />
+			  <td th:text="${venta.clave}" />
+			  <td th:text="${venta.cantidad}" />
+			  <td th:text="${venta.subtotal}" />
+			  <td th:text="${venta.iva}" />
+			  <td th:text="${venta.total}" />
 			  
 			  <td>					  
-				  <a type="submit" th:href="@{/Clientes/editarCliente/{id}(id=${cliente.id})}" class="btn btn-primary">Editar</a>
+				  <a type="submit" th:href="@{/Ventas/editarVenta/{id}(id=${venta.id})}" class="btn btn-primary">Editar</a>
 				  
-				  <a type="submit" th:href="@{/Clientes/BorrarCliente/{id}(id=${cliente.id})}" class="btn btn-danger">Eliminar</a>
+				  <a type="submit" th:href="@{/Ventas/BorrarVenta/{id}(id=${venta.id})}" class="btn btn-danger">Eliminar</a>
 			  </td>
 			  
 			</tr>		
