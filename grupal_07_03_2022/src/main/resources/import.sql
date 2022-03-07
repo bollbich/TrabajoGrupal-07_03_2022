@@ -1,7 +1,12 @@
+
+
+
+
 INSERT INTO clientes(nombre,apellidos,sexo,telefono,ventas) VALUES ("Andrés","González Fernández","Hombre",657899900,1);
 INSERT INTO clientes(nombre,apellidos,sexo,telefono,ventas) VALUES ("Rafa","García Irazusta","Hombre",656129901,2);
 INSERT INTO clientes(nombre,apellidos,sexo,telefono,ventas) VALUES ("Rainiero","Fresno Duval","Hombre",668945020,3);
 INSERT INTO clientes(nombre,apellidos,sexo,telefono,ventas) VALUES ("Pablo","Sariego Alonso","Hombre",601945310,4);
+
 
 INSERT INTO productos(nombre,descripcion,precio_unitario,existencias,ventas) VALUES ("Leche","Leche entera marca Pascual",5.20,100,1);
 INSERT INTO productos(nombre,descripcion,precio_unitario,existencias,ventas) VALUES ("Pan","Barra de pan larga",5.20,150,2);
