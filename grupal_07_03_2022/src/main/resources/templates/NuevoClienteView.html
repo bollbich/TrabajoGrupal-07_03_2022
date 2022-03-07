@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Indique los datos del cliente</title>
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-link" aria-current="page" th:href="@{/Clientes}">Clientes</a>
+  <a class="nav-link" th:href="@{/Cliente/Nuevo}">Nuevo cliente</a>
+</nav>
+<nav class="nav">
+  <a class="nav-link" aria-current="page" th:href="@{/Productos}">Productos</a>
+  <a class="nav-link" th:href="@{/Proyecto/Nuevo}">Nuevo Producto</a>
+</nav>
+<nav class="nav">
+  <a class="nav-link" aria-current="page" th:href="@{/Ventas}">Ventas</a>
+  <a class="nav-link" th:href="@{/Venta/Nuevo}">Nueva Venta</a>
+</nav>
+
+<div class="container">
+	<div class="row">
+	<h2 align="center">Indique los datos del nuevo cliente</h2>
+			<div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card"> 		
+					<div class="card-body">
+					
+						<form id="FormControlInput1" method="POST" th:action="@{/Clientes/GuardarCliente}" th:object="${KeyCliente}">
+								
+							<div class="mb-3">
+							  <label for="FormControlInput1" class="form-label">Nombre</label>
+							  <input th:field="*{nombre}" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre" required>
+							</div>
+							<div class="mb-3">
+							  <label for="FormControlInput1" class="form-label">Apellidos</label>
+							  <input th:field="*{apellidos}" type="text" class="form-control" id="exampleFormControlInput2" placeholder="Apellidos" required>
+							</div>
+							<div class="mb-3">  
+							  <label for="FormControlInput1" class="form-label">Telefono</label>
+							  <input th:field="*{telefono}" type="number" class="form-control" id="exampleFormControlInput4" placeholder="675839204" required>
+							</div>
+							<div class="mb-3">  
+							  <label for="FormControlInput1" class="form-label">Sexo</label>
+							  <input th:field="*{sexo}" type="text" class="form-control" id="exampleFormControlInput3" placeholder="M o H" required>
+							</div>
+
+							<div class="box-footer">
+		 						<button class="btn btn-success">Guardar</button>
+		 					</div>						
+							
+						</form>
+					</div>
+			</div>
+	</div>
+</div>
+
+	
+</body>
+</html>
