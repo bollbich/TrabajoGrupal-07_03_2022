@@ -1,5 +1,6 @@
 package com.formacionsprongboot.grupal_07_03_2022.entity;
 
+<<<<<<< HEAD:grupal_07_03_2022/src/main/java/com/formacionsprongboot/grupal_07_03_2022/entity/Producto.java
 
 
 	import java.io.Serializable;
@@ -94,4 +95,8 @@ import javax.persistence.Table;
 		
 		
 		
+=======
+public class Producto {
+
+>>>>>>> d66a6d7d35219d5425a5576966fa707a200fefce:src/main/java/com/formacionsprongboot/grupal_07_03_2022/entity/Producto.java
 }
