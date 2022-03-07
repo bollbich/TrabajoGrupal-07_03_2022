@@ -57,7 +57,6 @@ public class ClienteController {
 		clienteExistente.setApellidos(clienteExistente.getApellidos());
 		clienteExistente.setSexo(clienteExistente.getSexo());
 		clienteExistente.setTelefono(clienteExistente.getTelefono());
-		clienteExistente.setVentas(clienteExistente.getVentas());
 		
 		servicio.save(clienteExistente);
 		
