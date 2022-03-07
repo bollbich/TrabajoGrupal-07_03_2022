@@ -6,8 +6,10 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,22 +17,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
 
 import com.formacionsprongboot.grupal_07_03_2022.entity.Producto;
 import com.formacionsprongboot.grupal_07_03_2022.service.ProductoService;
-
-
-
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+
+
 
 
 
@@ -44,7 +39,7 @@ public class ProductoController {
 public String productos(Model modelo) {
 	
 	modelo.addAttribute("dato",servicio.findAll());
-	return "vista";
+	return "VistaProductos";
 }
 
 @GetMapping("productos/nuevo")
@@ -52,7 +47,7 @@ public String crearProductos(Model modelo) {
 	Producto p=new Producto();
 	
 	modelo.addAttribute("keyProducto",p);
-	return "nuevo_producto";
+	return "NuevoProductoView";
 }
 
 @PostMapping("/producto")
@@ -66,7 +61,7 @@ public String guardarProducto(@ModelAttribute("KeyProducto") Producto p) {
 public String editarProducto(@PathVariable Long id, Model modelo) {
 	modelo.addAttribute("keyProducto", servicio.findById(id));
 	
-	return "editar_producto";
+	return "EditarProductoView";
 }
 
 @PostMapping("/productos/{id}")
