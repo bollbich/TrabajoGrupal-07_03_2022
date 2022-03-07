@@ -13,7 +13,6 @@ import com.formacionsprongboot.grupal_07_03_2022.entity.Cliente;
 import com.formacionsprongboot.grupal_07_03_2022.service.ClienteService;
 
 @Controller
-@RequestMapping("/api")
 public class ClienteController {
 
 	@Autowired
