@@ -33,9 +33,6 @@ public class Cliente implements Serializable {
 	private String apellidos;
 	private String sexo;
 	private int telefono;
-	
-	@ManyToOne(cascade = CascadeType.REMOVE)
-	@JoinColumn(name = "id_folio")
 	private Venta ventas;
 	
 //Getters and Setters

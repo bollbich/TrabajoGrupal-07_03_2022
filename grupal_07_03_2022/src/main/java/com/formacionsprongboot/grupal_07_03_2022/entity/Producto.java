@@ -3,15 +3,14 @@ package com.formacionsprongboot.grupal_07_03_2022.entity;
 
 
 	import java.io.Serializable;
-	import java.util.Date;
+	
 
 	import javax.persistence.Column;
 	import javax.persistence.Entity;
 	import javax.persistence.GeneratedValue;
 	import javax.persistence.GenerationType;
 	import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+
 import javax.persistence.Table;
 
 
@@ -35,9 +34,6 @@ import javax.persistence.Table;
 		@Column(nullable=false)	
 		private int existencias;
 		
-		@ManyToOne
-		@JoinColumn(name = "id_folio")
-		private Venta ventas;
 		
 		
 
@@ -81,13 +77,7 @@ import javax.persistence.Table;
 			this.existencias = existencias;
 		}
 
-		public Venta getVentas() {
-			return ventas;
-		}
-
-		public void setVentas(Venta ventas) {
-			this.ventas = ventas;
-		}
+		
 		
 		
 		

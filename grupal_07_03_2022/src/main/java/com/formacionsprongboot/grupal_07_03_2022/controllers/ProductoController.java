@@ -62,7 +62,7 @@ public String actualizarProducto(@PathVariable Long id,@ModelAttribute("keyProdu
 	productoExistente.setDescripcion(p.getDescripcion());
 	productoExistente.setPrecio_unitario(p.getPrecio_unitario());
 	productoExistente.setExistencias(p.getExistencias());
-	productoExistente.setVentas(p.getVentas());
+	
 	
 	
 	servicio.save(productoExistente);
