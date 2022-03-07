@@ -103,6 +103,7 @@ public class ProductosController {
 			proActualizar.setDescripcion(p.getDescripcion());
 			proActualizar.setPrecio_unitario(p.getPrecio_unitario());
 			proActualizar.setExistencias(p.getExistencias());
+			proActualizar.setVentas(p.getVentas());
 			
 			servicio.save(proActualizar);
 		} catch (DataAccessException e) {
