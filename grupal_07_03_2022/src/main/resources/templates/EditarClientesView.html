@@ -30,7 +30,7 @@
 			<div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card"> 		
 					<div class="card-body">
 					
-						<form id="FormControlInput1" method="POST" th:action="@{/Clientes/editar/{id}(id=${KeyCliente.id})}" th:object="${KeyCliente}">
+						<form id="FormControlInput1" method="POST" th:action="@{/cliente/updateCliente/{id}(id=${KeyCliente.id})}" th:object="${KeyCliente}">
 								
 							<div class="mb-3">
 							  <label for="FormControlInput1" class="form-label">Nombre</label>
