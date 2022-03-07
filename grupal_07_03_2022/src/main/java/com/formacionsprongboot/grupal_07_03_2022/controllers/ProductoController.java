@@ -26,7 +26,7 @@ import com.formacionsprongboot.grupal_07_03_2022.service.ProductoService;
 
 @RestController
 @RequestMapping("/api")
-public class ProductosController {
+public class ProductoController {
 
 	@Autowired
 	private ProductoService servicio;
@@ -103,6 +103,7 @@ public class ProductosController {
 			proActualizar.setDescripcion(p.getDescripcion());
 			proActualizar.setPrecio_unitario(p.getPrecio_unitario());
 			proActualizar.setExistencias(p.getExistencias());
+			proActualizar.setVentas(p.getVentas());
 			
 			servicio.save(proActualizar);
 		} catch (DataAccessException e) {
