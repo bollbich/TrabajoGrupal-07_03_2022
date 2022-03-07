@@ -80,6 +80,15 @@ import javax.persistence.Table;
 		public void setExistencias(int existencias) {
 			this.existencias = existencias;
 		}
+
+		public Venta getVentas() {
+			return ventas;
+		}
+
+		public void setVentas(Venta ventas) {
+			this.ventas = ventas;
+		}
+		
 		
 		
 		
