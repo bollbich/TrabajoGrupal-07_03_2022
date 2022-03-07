@@ -34,9 +34,6 @@ public class Cliente implements Serializable {
 	private String sexo;
 	private int telefono;
 	
-	@ManyToOne(cascade = CascadeType.REMOVE)
-	@JoinColumn(name = "id_folio")
-	private Venta ventas;
 	
 //Getters and Setters
 
@@ -79,19 +76,5 @@ public class Cliente implements Serializable {
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
-
-	public Venta getVentas() {
-		return ventas;
-	}
-
-	public void setVentas(Venta ventas) {
-		this.ventas = ventas;
-	}
-	
-	
-	
-	
-	
-	
 
 }
