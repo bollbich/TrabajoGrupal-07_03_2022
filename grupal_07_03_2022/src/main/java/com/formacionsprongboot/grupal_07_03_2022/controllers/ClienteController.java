@@ -22,7 +22,7 @@ public class ClienteController {
 	@GetMapping("/clientes")
 	public String clientes(Model modelo) {
 		
-		modelo.addAttribute("dato",servicio.findAll());
+		modelo.addAttribute("Clientes",servicio.findAll());
 		return "vistaClientes";
 	}
 
