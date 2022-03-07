@@ -26,7 +26,7 @@ import com.formacionsprongboot.grupal_07_03_2022.service.ProductoService;
 
 @RestController
 @RequestMapping("/api")
-public class ProductosController {
+public class ProductoController {
 
 	@Autowired
 	private ProductoService servicio;
