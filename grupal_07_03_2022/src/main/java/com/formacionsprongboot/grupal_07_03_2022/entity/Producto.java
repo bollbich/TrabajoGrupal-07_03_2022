@@ -37,6 +37,18 @@ import javax.persistence.Table;
 		
 		
 
+		public Producto() {
+			
+		}
+
+		public Producto(String nombre, String descripcion, double precio_unitario, int existencias) {
+			
+			this.nombre = nombre;
+			this.descripcion = descripcion;
+			this.precio_unitario = precio_unitario;
+			this.existencias = existencias;
+		}
+
 		public Long getId_producto() {
 			return id_producto;
 		}

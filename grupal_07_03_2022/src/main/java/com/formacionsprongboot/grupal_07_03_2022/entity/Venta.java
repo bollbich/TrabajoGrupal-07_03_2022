@@ -38,6 +38,23 @@ public class Venta implements Serializable{
 	private int iva;
 	private double total;
 	
+	
+	
+	public Venta() {
+		
+	}
+
+	public Venta( int cantidad, double subtotal, int iva, double total,Cliente id_cliente,Producto id_producto) {
+		
+		
+		this.cantidad = cantidad;
+		this.subtotal = subtotal;
+		this.iva = iva;
+		this.total = total;
+		this.numeroCliente = id_cliente;
+		this.claveProducto = id_producto;
+	}
+
 	public Long getFolio() {
 		return folio;
 	}

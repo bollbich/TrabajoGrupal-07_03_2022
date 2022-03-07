@@ -34,6 +34,20 @@ public class Cliente implements Serializable {
 	private String sexo;
 	private int telefono;
 	
+	
+	
+public Cliente() {
+		
+	}
+
+public Cliente(String nombre, String apellidos, String sexo, int telefono) {
+		
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.sexo = sexo;
+		this.telefono = telefono;
+	}
+
 //Getters and Setters
 
 	public Long getId_cliente() {
