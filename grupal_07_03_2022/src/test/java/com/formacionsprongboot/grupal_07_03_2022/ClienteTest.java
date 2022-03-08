@@ -57,7 +57,7 @@ public class ClienteTest {
 	}
 	
 	@Test
-	@Rollback(false)
+	@Rollback(true)
 	public void TestBorrarCliente() {
 		Long id=(long)1;
 		boolean existe=clienteDao.findById(id).isPresent();

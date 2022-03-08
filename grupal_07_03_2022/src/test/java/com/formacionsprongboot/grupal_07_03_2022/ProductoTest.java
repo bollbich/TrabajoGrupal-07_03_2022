@@ -58,7 +58,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 		}
 		
 		@Test
-		@Rollback(false)
+		@Rollback(true)
 		public void TestBorrarProducto() {
 			Long id=(long)1;
 			boolean existe=productoDao.findById(id).isPresent();
